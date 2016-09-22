@@ -39,7 +39,7 @@ RUN set -x \
     && rm sonarqube.zip* \
     && rm -rf $SONARQUBE_HOME/bin/*
 RUN wget https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-2.7.zip -P /tmp
-RUN unzip /tmp/sonar-scanner-2.7.zip -d /opt/sonarqube/scanner
+RUN unzip /tmp/sonar-scanner-2.7.zip -d /opt
 
 VOLUME ["$SONARQUBE_HOME/data", "$SONARQUBE_HOME/extensions"]
 
